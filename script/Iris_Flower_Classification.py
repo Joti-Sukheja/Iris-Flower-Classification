@@ -3,8 +3,6 @@
 
 # # Load the Dataset
 
-# In[1]:
-
 
 # Using Scikit-learn’s Built-in Dataset
 from sklearn.datasets import load_iris
@@ -28,9 +26,6 @@ df.head()
 
 # # Exploratory Data Analysis
 
-# In[2]:
-
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -47,15 +42,12 @@ plt.show()
 
 # ## Prepare Data for Training
 
-# In[3]:
-
 
 # Separate Features & Labels
 X = df.drop(columns=['species'])  # Features (measurements)
 y = df['species']  # Labels (flower species)
 
 
-# In[4]:
 
 
 # Split Data into Training & Testing Sets
@@ -66,7 +58,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # ## Train a Machine Learning Model
 
-# In[5]:
 
 
 from sklearn.linear_model import LogisticRegression
@@ -77,8 +68,6 @@ model.fit(X_train, y_train)
 
 
 # ## Evaluate Model Performance
-
-# In[6]:
 
 
 from sklearn.metrics import accuracy_score, classification_report
@@ -96,7 +85,6 @@ print(classification_report(y_test, y_pred))
 
 # # Make Predictions on New Data
 
-# In[8]:
 
 
 # Test the model with new iris measurements.
@@ -114,7 +102,6 @@ print("Predicted Species:", predicted_species[0])
 
 # ## Visualize Results
 
-# In[9]:
 
 
 from sklearn.svm import SVC
@@ -131,7 +118,6 @@ plt.title("Iris Flower Classification Decision Boundary")
 plt.show()
 
 
-# In[ ]:
 
 
 
